@@ -1,10 +1,7 @@
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Escola {
 
-    //TODO: MUDAR DE SET PARA OUTRO QUE RETORNE EM ORDEM ALFABETICA
     Set<Turma> todasAsTurmasDaEscola = new HashSet<>();
 
 
@@ -12,11 +9,15 @@ public class Escola {
         todasAsTurmasDaEscola.add(turma);
     }
 
-    Set<Aluno> retornaTodosOsAlunos() {
-        Set<Aluno> alunosUnicos = new HashSet<>();
+    SortedSet<Aluno> retornaTodosOsAlunos() {
+        SortedSet<Aluno> alunosUnicos = new TreeSet<>();
         for(Turma turma: todasAsTurmasDaEscola) {
             alunosUnicos.addAll(turma.getAlunos());
         }
         return alunosUnicos;
+    }
+
+    int totalAlunos () {
+       return retornaTodosOsAlunos().size();
     }
 }

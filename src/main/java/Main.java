@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Escola saoBento = new Escola();
         Turma java = new Turma("Java");
-        Turma bancoDeDados = new Turma("DB");
+        Turma bancoDeDados = new Turma("Banco de Dados");
 
         saoBento.adicionarTurma(bancoDeDados);
         saoBento.adicionarTurma(java);
@@ -37,7 +37,12 @@ public class Main {
         bancoDeDados.adicionarAluno("Dra. Alana Porto");
 
 
+        System.out.println(java.getNome());
+        System.out.println(bancoDeDados.getNome());
+
+        //função que retorna TODOS os alunos da ESCOLA
         System.out.println(saoBento.retornaTodosOsAlunos());
+        System.out.println(saoBento.totalAlunos());
 
 
 //        System.out.println(java.todosOsAlunos());

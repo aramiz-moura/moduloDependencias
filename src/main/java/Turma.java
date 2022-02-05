@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class Turma {
 
+    @Getter
     final private String nome;
 
     @Getter
@@ -28,6 +29,8 @@ public class Turma {
         return alunos.stream().map(aluno -> aluno.getNome()).collect(Collectors.joining(","));
     }
 
+
+    //outro método/jeito de imprimir os alunos;
     @Override
     public String toString() {
         String todosAlunos = "";

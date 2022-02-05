@@ -5,13 +5,22 @@ import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
 @EqualsAndHashCode
-@ToString
 @RequiredArgsConstructor
-public class Aluno {
+public class Aluno implements Comparable<Aluno>{
 
 
-    //TODO IMPLEMENTAR O TO STRING SEM LOMBOK;
+
     @Getter
     final private String nome;
 
+    @Override
+    public String toString() {
+        return this.getNome();
+    }
+
+
+    @Override
+    public int compareTo(Aluno o) {
+        return this.nome.compareTo(o.nome);
+    }
 }
