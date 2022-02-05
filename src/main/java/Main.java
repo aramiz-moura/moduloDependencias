@@ -1,4 +1,5 @@
-import java.util.List;
+import java.io.*;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -43,6 +44,32 @@ public class Main {
         //função que retorna TODOS os alunos da ESCOLA
         System.out.println(saoBento.retornaTodosOsAlunos());
         System.out.println(saoBento.totalAlunos());
+
+
+        try {
+            FileWriter arquivoSaida = new FileWriter("dadosTurmas.txt");
+            BufferedWriter saida = new BufferedWriter(arquivoSaida);
+            for(Turma turma: saoBento.todasAsTurmasDaEscola){
+                saida.write("Turma: " + turma.getNome());
+                saida.newLine();
+                saida.write(String.valueOf(turma.getAlunos().size()));
+                saida.newLine();
+                for(Aluno aluno: turma.getAlunos()){
+                    saida.write(aluno.getNome());
+                    saida.newLine();
+                }
+            }
+            saida.newLine();
+            for(Aluno alunoEscola: saoBento.retornaTodosOsAlunos()){
+                saida.write(alunoEscola.getNome());
+                saida.newLine();
+            }
+            saida.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
 
 
 //        System.out.println(java.todosOsAlunos());
