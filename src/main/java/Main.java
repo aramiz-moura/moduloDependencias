@@ -52,13 +52,15 @@ public class Main {
             for(Turma turma: saoBento.todasAsTurmasDaEscola){
                 saida.write("Turma: " + turma.getNome());
                 saida.newLine();
-                saida.write(String.valueOf(turma.getAlunos().size()));
+                saida.write(String.valueOf("Quantidade de alunos na turma: " + turma.getAlunos().size()));
                 saida.newLine();
                 for(Aluno aluno: turma.getAlunos()){
                     saida.write(aluno.getNome());
                     saida.newLine();
                 }
             }
+            saida.newLine();
+            saida.write("Todos os alunos da Escola: ");
             saida.newLine();
             for(Aluno alunoEscola: saoBento.retornaTodosOsAlunos()){
                 saida.write(alunoEscola.getNome());

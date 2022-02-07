@@ -1,5 +1,5 @@
-Turma:Java
-11
+Turma: Java
+Quantidade de alunos na turma: 11
 Projeto - Mod. Dependencias Externas
 Alexandre Martins
 Vitor Hugo Lima
@@ -11,8 +11,8 @@ Srta. Ana Júlia Ramos
 Pietra Martins
 Thomas Peixoto
 Thales Farias
-Turma:Banco de Dados
-12
+Turma: Banco de Dados
+Quantidade de alunos na turma: 12
 Vitor Hugo Lima
 Esther Rodrigues
 Nathan Nascimento
@@ -26,6 +26,7 @@ Srta. Ana Júlia Ramos
 Thales Farias
 Dra. Alana Porto
 
+Todos os alunos da Escola: 
 Alexandre Martins
 Dra. Alana Porto
 Dra. Lavínia Lopes
